@@ -1,14 +1,20 @@
-function greeting(){
- let message="hello"; 
-}
-//console.log(message)//error
-// nested functions
-function Nestedfun(){
-    let message="hello";
-    let sayHi=function hi(){
-       let message="Hi"
-    } 
-    sayHi();
-    console.log(message) //hello 
-   }
-Nestedfun()
+/*
+let greeding=(function(){
+    let message="Hello";
+    let getmessage=function(){
+        return message;
+    }
+
+})();
+console.log(greeding.getmessage())//undefined error
+*/ 
+let greeding= (function(){
+    let message="message";
+    let getmsg=function(){
+        return message;
+    };
+    return{
+        getmsg:getmsg//clouser
+    }
+})();
+console.log(greeding.getmsg())
