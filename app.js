@@ -1,6 +1,14 @@
-function Allprint(){
-    for(let i=0;i<arguments.length;i++){
-        console.log(i)
-    }
+function greeting(){
+ let message="hello"; 
 }
-Allprint(1,2,3,4,5,6);
+//console.log(message)//error
+// nested functions
+function Nestedfun(){
+    let message="hello";
+    let sayHi=function hi(){
+       let message="Hi"
+    } 
+    sayHi();
+    console.log(message) //hello 
+   }
+Nestedfun()
