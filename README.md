@@ -35,3 +35,14 @@ consle.log(arguments[i])
 <br>
 ALLname(1,2,3,4,5,6)
 Allname(10,20)
+### Block Scope:
+<b><b>Variables declare with the var keyword and within the function declaration do not have the block scope.</b></b>
+### Immediately Invoked Function Expression:
+###### Function Expression:
+Declaring a function and assign it to a variable.
+###### Immediately Invoked:
+Invoking the function right away where it is defined.
+#### Example IIFE:
+(fuction(){<br>
+console.log("Message")<br>
+})();
