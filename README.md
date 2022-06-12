@@ -90,3 +90,37 @@ console.log(pokar);<br>
 In regular Functions, this keyword refer to the object that invoked this. On the other hand,  
 Arow function do not have the this keyword,  if we invoked it inside arrow function, it always refer to the
 global object(window object).
+## Module 3:
+In this module we will learn<br>
+- Understanding Function Context
+- Call, Apply
+- Bind
+- Built-in Functions like <b>eval, parseInt, parseFloat,escape</b>
+#### Understanding Function Context:
+<b>lets see examples</b><br>
+- Understanding Function Context<br>
+function sayHi(){<br>
+   console.log("Hi");<br>
+   console.log(this);<br>
+}<br>
+sayHi();//Hi<br>
+        //window object<br>
+- Creating an empty object and add a property to it<br>
+let greet={};        <br>
+greet.sayHi=function(){<br>
+            console.log("Hi");<br>
+            console.log(this);<br>
+         }<br>
+greet.sayHi();//Hi<br>
+              //greet<br>
+- Now look Another way of creating functions in JS<br>
+function sayHi(){<br>
+    console.log("Hi");<br>
+    console.log(this);<br>
+ }<br>
+let hey= new sayHi();//Hi<br>
+                    // empty Object<br>
+ //This is also known as constructor function<br>
+/* Any time when you call a function with new keyword <br>
+Javascript create an empty object within the function */ <br>
+ 
