@@ -1,21 +1,28 @@
-//Arrow function is  similar t the regular function with concise expression.
-//Examle of regular function
-let greeding=function(){
-    return "Hello";
+// Understanding Function Context
+function sayHi(){
+   console.log("Hi");
+   console.log(this);
 }
-let message=greeding();
-console.log("This is hello mesaage "+message);
-//Examle with arrow function
-let greet=()=>"Hello";
-let msg=greet()
-console.log("This is the greeding message with Arrow function " + msg)
-//Example with arguments
-let hamza=function greetings(name){
-      return "Hello "+ name
-}
-let hafiz=hamza("Hamza");
-console.log(hafiz);
-//Examle with arrow function
-let attari=Name=>"Hello "+Name
-let pokar=attari("Hafiz");
-console.log(pokar);
+sayHi();//Hi
+        //window object
+
+let greet={};        
+greet.sayHi=function(){
+            console.log("Hi");
+            console.log(this);
+         }
+greet.sayHi();//Hi
+              //greet
+
+
+
+//Now look Another way of creating functions in JS
+function sayHi(){
+    console.log("Hi");
+    console.log(this);
+ }
+let hey= new sayHi();//Hi
+                    // empty Object
+ //This is also known as constructor function
+/* Any time when you call a function with new keyword 
+Javascript create an empty object within the function */ 
