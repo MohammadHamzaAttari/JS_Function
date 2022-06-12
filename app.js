@@ -1,12 +1,21 @@
-//Another example of Clouser
-function peer(val){
-    return function(){
-        return val++;
-    }
+//Arrow function is  similar t the regular function with concise expression.
+//Examle of regular function
+let greeding=function(){
+    return "Hello";
 }
-let peer1=peer(10);
-console.log("First value of Peer1 is "+peer1());
-console.log("Second value of Peer1 is "+peer1());
-let peer2=peer(20);
-console.log("First value of Peer2 is "+peer2());
-console.log("Second value of Peer2 is "+peer2());
+let message=greeding();
+console.log("This is hello mesaage "+message);
+//Examle with arrow function
+let greet=()=>"Hello";
+let msg=greet()
+console.log("This is the greeding message with Arrow function " + msg)
+//Example with arguments
+let hamza=function greetings(name){
+      return "Hello "+ name
+}
+let hafiz=hamza("Hamza");
+console.log(hafiz);
+//Examle with arrow function
+let attari=Name=>"Hello "+Name
+let pokar=attari("Hafiz");
+console.log(pokar);
