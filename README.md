@@ -123,4 +123,29 @@ let hey= new sayHi();//Hi<br>
  //This is also known as constructor function<br>
 /* Any time when you call a function with new keyword <br>
 Javascript create an empty object within the function */ <br>
- 
+## Function Methods:
+### Call Method:
+- The way how we call different objects using a function 
+let person1={name:"Hamza",age:"25"}<br>
+let person2={name:"Qasim",age:"26"}<br>
+function sayHi(){<br>
+    console.log("Hi");<br>
+    console.log(this.name);<br>
+}<br>
+sayHi.call(person1);<br>
+sayHi.call(person2);<br>
+- Same thing using function expression
+let person3={name:"Hamza",age:"25"}<br>
+let person4={name:"Qasim",age:"26"}<br>
+let funexp=function (){<br>
+    console.log("Hi");<br>
+    console.log(this.name);<br>
+}<br>
+funexp.call(person3);<br>
+funexp.call(person4);<br>
+- With arguments in call
+let Person={name:"Sajid",age:74}<br>
+let welcome=function(message){<br>
+    console.log(message+", "+this.name);<br>
+}<br>
+welcome.call(Person,"Hi");//First argument must be object<br>
