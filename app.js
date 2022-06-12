@@ -1,20 +1,12 @@
-/*
-let greeding=(function(){
-    let message="Hello";
-    let getmessage=function(){
-        return message;
+//Another example of Clouser
+function peer(val){
+    return function(){
+        return val++;
     }
-
-})();
-console.log(greeding.getmessage())//undefined error
-*/ 
-let greeding= (function(){
-    let message="message";
-    let getmsg=function(){
-        return message;
-    };
-    return{
-        getmsg:getmsg//clouser
-    }
-})();
-console.log(greeding.getmsg())
+}
+let peer1=peer(10);
+console.log("First value of Peer1 is "+peer1());
+console.log("Second value of Peer1 is "+peer1());
+let peer2=peer(20);
+console.log("First value of Peer2 is "+peer2());
+console.log("Second value of Peer2 is "+peer2());
