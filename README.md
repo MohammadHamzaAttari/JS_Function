@@ -46,3 +46,47 @@ Invoking the function right away where it is defined.
 (fuction(){<br>
 console.log("Message")<br>
 })();
+#### Clouser:
+When we want to use the variable out if its scope then we use the concept of clouser.
+## Module 2:
+### Overview:
+In this module, we will cover,
+- Arrow function pros and cons.
+- How to define an arrow function.
+- use of this keyword.
+#### Arrow Function:
+Arrow function behave similar to regular function. It was introduced in ES6 in 2015. Arrow function in JS similar to 
+Lambda function in Python.
+<b> Why we use Arrow function
+</b><br>
+- shortest syntax
+- easier to understand how vaiables are scoped within them.
+- this derives its value from closing lexical scope.
+##### Side effects:
+- Understand the behaviour of this keyword.
+- No implicit arguments objects.
+### Difference btw Arrow Function And Regular Function:
+###### Example of regular Function:
+let greeding=function(){<br>
+    return "Hello";<br>
+}<br>
+let message=greeding();<br>
+console.log("This is hello mesaage "+message);<br>
+###### Examle with arrow function
+let greet=()=>"Hello";<br>
+let msg=greet()<br>
+console.log("This is the greeding message with Arrow function " + msg)<br>
+//Example with arguments<br>
+let hamza=function greetings(name){<br>
+      return "Hello "+ name<br>
+}<br>
+let hafiz=hamza("Hamza");<br>
+console.log(hafiz);<br>
+###### Examle with arrow function
+let attari=Name=>"Hello "+Name<br>
+let pokar=attari("Hafiz");<br>
+console.log(pokar);<br>
+### Behavoir of this::
+In regular Functions, this keyword refer to the object that invoked this. On the other hand,  
+Arow function do not have the this keyword,  if we invoked it inside arrow function, it always refer to the
+global object(window object).
