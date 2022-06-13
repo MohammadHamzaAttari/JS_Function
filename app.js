@@ -1,13 +1,10 @@
-//default parameter
-function defaultp(name="World"){
-    console.log("Hello "+name);
+//Rest parameters
+function Rest(...names){
+    names.forEach(name=>console.log("Hi "+name));
 }
-defaultp();
-defaultp("Hamza");
-//important Note
-//Default parameter should always come after the regular parameter.
-function Hello(message,name="world"){
-    console.log(message+name);
-} 
-Hello("Hi");
-Hello("Hye","John");
+Rest("Hamza","Sajid","Attari");
+//Rest parameters with regular arguments
+function Restwith(message,...names){
+    names.forEach(name=>console.log(message+" "+name));
+}
+Restwith("Welcome","Hamza","Sajid","Attari");
