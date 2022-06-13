@@ -1,10 +1,12 @@
-//Rest parameters
-function Rest(...names){
-    names.forEach(name=>console.log("Hi "+name));
+//Spread operator
+function greet(person1,person2){
+    console.log("Welcome to "+person1+" Hi to  "+person2)
 }
-Rest("Hamza","Sajid","Attari");
-//Rest parameters with regular arguments
-function Restwith(message,...names){
-    names.forEach(name=>console.log(message+" "+name));
+let men=["Shahzaib","Jahazaib"]
+greet(...men)
+// Passing string
+function display(para1,para2,para3,para4){
+    console.log(para1+para2+para3+para4);
 }
-Restwith("Welcome","Hamza","Sajid","Attari");
+let str="abcd";
+display(...str);
