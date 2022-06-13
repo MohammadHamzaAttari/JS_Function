@@ -33,8 +33,8 @@ consle.log(arguments[i])
 <br>
 }
 <br>
-ALLname(1,2,3,4,5,6)
-Allname(10,20)
+ALLname(1,2,3,4,5,6)<br>
+Allname(10,20)<br>
 ### Block Scope:
 <b><b>Variables declare with the var keyword and within the function declaration do not have the block scope.</b></b>
 ### Immediately Invoked Function Expression:
@@ -149,3 +149,71 @@ let welcome=function(message){<br>
     console.log(message+", "+this.name);<br>
 }<br>
 welcome.call(Person,"Hi");//First argument must be object<br>
+#### Apply Method:
+Apply method identical to the call method but the difference is that apply method accepts only<br>
+array of arguments but the call method accept the list of arguments.<br>
+- Difference between Apply and call<br>
+function introduction(name,profession){<br>
+    console.log("I am "+name+" and my Profession is "+profession);<br>
+    console.log(this);<br>
+}<br>
+introduction("hamza","Freelance");<br>
+introduction.apply(undefined,["hamza","Teaching"]);<br>
+introduction.call(undefined,"Sajid","Designer");<br>
+#### Bind Method:
+We can change the context of context of a function using bind method.<br>
+****Bind method****<br>
+person1={<br>
+    name:"Hamza",<br>
+    getName:function(){<br>
+        return this.name;<br>
+    }<br>
+};<br>
+person2={name:"sajid"};<br>
+let person1Copy=person1.getName.bind(person2);<br>
+console.log(person1Copy());<br>
+## Module 4:
+In this module, we are discussing about 
+- Default paramters
+- Constructing Rest parameters
+- Using the spread operator
+###### Default Parameter:
+- default parameter<br>
+function defaultp(name="World"){<br>
+    console.log("Hello "+name);<br>
+}<br>
+defaultp();<br>
+defaultp("Hamza");<br>
+- important Note
+- ****Default parameter should always come after the regular parameter.****<br>
+function Hello(message,name="world"){<br>
+    console.log(message+name);<br>
+} <br>
+Hello("Hi");<br>
+Hello("Hye","John");<br>
+##### Rest parameter:
+With rest parameters, you can store multple arguments in a single array. This is specially usefull when you are 
+invoking a function with multiple arguments.
+- Rest parameters<br>
+function Rest(...names){<br>
+    names.forEach(name=>console.log("Hi "+name));<br>
+}<br>
+Rest("Hamza","Sajid","Attari");<br>
+- Rest parameters with regular arguments<br>
+function Restwith(message,...names){<br>
+    names.forEach(name=>console.log(message+" "+name));<br>
+}<br>
+Restwith("Welcome","Hamza","Sajid","Attari");<br>
+###### Spread operator:
+- Spread operator
+function greet(person1,person2){<br>
+    console.log("Welcome to "+person1+" Hi to  "+person2)<br>
+}<br>
+let men=["Shahzaib","Jahazaib"]<br>
+greet(...men)<br>
+- Passing string
+function display(para1,para2,para3,para4){<br>
+    console.log(para1+para2+para3+para4);<br>
+}<br>
+let str="abcd";<br>
+display(...str);<br>
